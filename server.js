@@ -27,7 +27,7 @@ app.post('/login', (req, res)=>{
 
     let token = Jwt.sign({username: req.body.username, email: email}, process.env.JWT_KEY)
 
-    return res.status(200).json({error: true, message: "login successfull", data: {username: req.body.username, email: email, token: token}})
+    return res.status(200).json({error: false, message: "login successfull", data: {username: req.body.username, email: email, token: token}})
 
 })
 
